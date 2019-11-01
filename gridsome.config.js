@@ -6,6 +6,7 @@
 
 module.exports = {
   siteName: "humand",
+  titleTemplate: `%s | humand`,
   plugins: [
     {
       use: "gridsome-plugin-tailwindcss",
