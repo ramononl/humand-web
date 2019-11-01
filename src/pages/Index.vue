@@ -10,9 +10,9 @@
       <div class="sm:w-10/12 lg:w-auto sm:mx-auto lg:mx-0 lg:absolute right-0 top-0 mt-16 lg:mt-32 px-8 py-16 bg-green-500 rounded-lg">
         <h1 class="xl:mt-8 text-3xl xl:text-4xl leading-snug font-black text-green-100">Make your choice.<br/>Support meaningful projects.</h1>
         <p class="mt-3 font-black text-green-200">Monthly charity subscription service</p>
-        <div class="mt-8">
-          <AppButton link="/about" buttonText="How does it work?" buttonStyle="primary-light" class="block sm:inline-block"/>
-          <AppButton link="#signup" buttonText="Become a humand" buttonStyle="primary-light-outline" class="block sm:inline-block mt-3 sm:mt-0 sm:ml-3" @click.native="signupModalOpen = true"/>
+        <div class="mt-8 md:flex">
+          <AppButton link="/about" buttonText="How does it work?" buttonStyle="primary-light"/>
+          <AppButton link="#signup" buttonText="Become a humand" iconComp="iconArrowRight" buttonStyle="primary-light-outline" class="block mt-3 md:mt-0 md:ml-3" @click.native="signupModalOpen = true"/>
         </div>
       </div>
     </div>
