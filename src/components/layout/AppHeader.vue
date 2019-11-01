@@ -14,11 +14,11 @@
         </button>
       </div>
     </div>
-    <div :class="isOpen ? 'absolute' : 'hidden'" class="right-0 w-56 bg-white shadow-lg z-10 px-4 py-6 border-gray-300 rounded-lg lg:rounded-none border lg:border-0 lg:p-0 lg:flex lg:items-center lg:static lg:w-auto lg:bg-transparent lg:shadow-none lg:z-auto">
+    <div :class="isOpen ? 'absolute' : 'hidden'" class="right-0 mt-3 lg:mt-0 w-64 bg-white shadow-lg z-10 px-6 py-6 border-gray-300 rounded-lg lg:rounded-none border lg:border-0 lg:p-0 lg:flex lg:items-center lg:static lg:w-auto lg:bg-transparent lg:shadow-none lg:z-auto">
       <nav>
-        <g-link class="block lg:inline text-xl font-bold text-gray-700 hover:text-gray-500 transition-all" to="/projects/">Discover Projects</g-link>
-        <g-link class="block lg:inline mt-2 lg:mt-0 lg:ml-8 text-xl font-bold text-gray-700 hover:text-gray-500 transition-all" to="/about/">How does it work?</g-link>
-        <g-link class="block lg:inline mt-2 lg:mt-0 lg:mx-8 text-xl font-bold text-gray-700 hover:text-gray-500 transition-all" to="/raise/">Raise Funds</g-link>
+        <g-link class="block lg:inline text-xl lg:text-base font-bold text-gray-700 hover:text-gray-500 transition-all" to="/projects/">Discover Projects</g-link>
+        <g-link class="block lg:inline mt-3 lg:mt-0 lg:ml-8 text-xl lg:text-base font-bold text-gray-700 hover:text-gray-500 transition-all" to="/about/">How does it work?</g-link>
+        <g-link class="block lg:inline mt-3 lg:mt-0 lg:mx-8 text-xl lg:text-base font-bold text-gray-700 hover:text-gray-500 transition-all" to="/raise/">Raise Funds</g-link>
       </nav>
       <AppButton link="#signin" buttonStyle="secondary" buttonText="Login" iconComp="iconUser" class="mt-4 lg:mt-0 justify-center"/>
     </div>
