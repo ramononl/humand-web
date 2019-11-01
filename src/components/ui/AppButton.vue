@@ -1,7 +1,7 @@
 <template>
-  <a :href="link" :class="[buttonStyle, iconComp ? 'flex items-center' : '']" class="px-4 py-2 rounded-lg border-2 font-bold tracking-widest uppercase focus:outline-none transition-all">
+  <a :href="link" :class="[buttonStyle, iconComp ? 'inline-flex items-center' : 'inline-block']" class="px-4 py-2 rounded-lg border-2 font-bold tracking-widest uppercase focus:outline-none transition-all">
     {{ buttonText }}
-    <IconBase v-if="iconComp" :iconClasses="['w-5 h-5']" class="ml-2"><component :is="iconComp"/></IconBase>
+    <IconBase v-if="iconComp" :iconClasses="['w-5 h-5']" class="ml-2 flex-shrink-0"><component :is="iconComp"/></IconBase>
   </a>
 </template>
 
