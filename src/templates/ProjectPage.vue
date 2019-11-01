@@ -1,7 +1,12 @@
 <template>
   <Layout>
     <div class="max-w-4xl mx-auto">
-      <div class="my-4">Go back</div>
+      <div class="mb-3 px-12">
+        <g-link to="/projects" class="inline-flex items-center group">
+          <IconBase class="text-gray-600 group-hover:text-gray-500 transition-all" :iconClasses="['w-10 h-10']"><IconBack/></IconBase>
+          <span class="-ml-2 inline-block font-bold text-gray-600 group-hover:text-gray-500 transition-all">Go back</span>
+        </g-link>
+      </div>
       <div class="bg-white shadow-lg rounded-lg overflow-hidden">
         <div class="relative pb-9/16">
           <g-image :src="$page.projectPage.image" :alt="$page.projectPage.title" class="absolute inset-0 h-full w-full object-cover"/>
