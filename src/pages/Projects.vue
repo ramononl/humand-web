@@ -1,26 +1,9 @@
 <template>
   <Layout>
-    <ProjectFilter/>
-    <div>
-      <div class="mt-10 flex items-center">
-        <h2 class="text-2xl font-bold text-gray-700">Environment</h2>
-        <div class="ml-3 px-1 hover:bg-gray-500 text-xxs rounded border border-gray-500 tracking-widest font-bold text-gray-500 hover:text-gray-100 uppercase">View all</div>
-      </div>
-      <p class="mt-1 text-gray-600">Donate for environmental protection! Whether climate change, water pollution or environmental policy.</p>
-      <ProjectCardContainer>
-        <ProjectCard v-for="project in projectsEnvironment" :key="project.node.id" :cardData="project.node"/>
-      </ProjectCardContainer>
-      <div class="mt-10 flex items-center">
-        <h2 class="text-2xl font-bold text-gray-700">Children and youth</h2>
-        <div class="ml-3 px-1 text-xxs rounded border border-gray-500">
-          <span class="tracking-widest font-bold text-gray-500 uppercase">View all</span>
-        </div>
-      </div>
-      <p class="mt-1 text-gray-600">Let all children be happy! Donate now for children and youth projects.</p>
-      <ProjectCardContainer>
-        <ProjectCard v-for="project in projectsChildren" :key="project.node.id" :cardData="project.node"/>
-      </ProjectCardContainer>
-    </div>
+    <ProjectFilter @setParentProjectView="setProjectView"/>
+    <ViewCategory v-if="projectView === 'category'" :projectData="projectData" />
+    <ViewMap v-if="projectView === 'map'" :projectData="projectData" />
+    <ViewPopular v-if="projectView === 'popular'" :projectData="projectData" />
   </Layout>
 </template>
 
@@ -44,8 +27,9 @@ query AllProjects {
 
 <script>
 import ProjectFilter from '~/components/ui/ProjectFilter.vue'
-import ProjectCardContainer from '~/components/layout/ProjectCardContainer.vue'
-import ProjectCard from '~/components/ui/ProjectCard.vue'
+import ViewCategory from '~/components/views/ViewCategory.vue'
+import ViewMap from '~/components/views/ViewMap.vue'
+import ViewPopular from '~/components/views/ViewPopular.vue'
 
 export default {
   metaInfo: {
@@ -53,21 +37,23 @@ export default {
   },
   components: {
     ProjectFilter,
-    ProjectCardContainer,
-    ProjectCard
+    ViewCategory,
+    ViewMap,
+    ViewPopular
+  },
+  data() {
+    return {
+      projectView: "category",
+    }
   },
   computed: {
-    projectsEnvironment() {      
-      const projectsFiltered = this.$static.allProjectPage.edges.filter(function (el) {
-        return el.node.category === "Environment"
-      });
-      return projectsFiltered
-    },
-    projectsChildren() {      
-      const projectsFiltered = this.$static.allProjectPage.edges.filter(function (el) {
-        return el.node.category === "Children and youth"
-      });
-      return projectsFiltered
+    projectData() {
+      return this.$static.allProjectPage.edges
+    }
+  },
+  methods: {
+    setProjectView(view) {
+      this.projectView = view;
     }
   }
 }
