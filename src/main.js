@@ -21,6 +21,15 @@ import IconBack from "~/components/icons/IconBack.vue";
 import IconArrowRight from "~/components/icons/IconArrowRight.vue";
 import IconPlay from "~/components/icons/IconPlay.vue";
 import IconLogout from "~/components/icons/IconLogout.vue";
+import IconCollection from "~/components/icons/IconCollection.vue";
+import IconMap from "~/components/icons/IconMap.vue";
+import IconDashboard from "~/components/icons/IconDashboard.vue";
+import IconInbox from "~/components/icons/IconInbox.vue";
+import IconDonations from "~/components/icons/IconDonations.vue";
+import IconSettings from "~/components/icons/IconSettings.vue";
+import IconPayment from "~/components/icons/IconPayment.vue";
+import IconAnalytics from "~/components/icons/IconAnalytics.vue";
+import IconNotifications from "~/components/icons/IconNotifications.vue";
 
 export default function(Vue, { router, head, isClient, appOptions }) {
   // Set default layout as a global component
@@ -39,9 +48,21 @@ export default function(Vue, { router, head, isClient, appOptions }) {
   Vue.component("IconArrowRight", IconArrowRight);
   Vue.component("IconPlay", IconPlay);
   Vue.component("IconLogout", IconLogout);
+  Vue.component("IconCollection", IconCollection);
+  Vue.component("IconMap", IconMap);
+  Vue.component("IconDashboard", IconDashboard);
+  Vue.component("IconInbox", IconInbox);
+  Vue.component("IconDonations", IconDonations);
+  Vue.component("IconSettings", IconSettings);
+  Vue.component("IconPayment", IconPayment);
+  Vue.component("IconAnalytics", IconAnalytics);
+  Vue.component("IconNotifications", IconNotifications);
 
   // Add attributes to BODY tag
-  head.bodyAttrs = { class: "bg-green-050 text-gray-900 font-sans antialiased relative min-h-screen pb-8" };
+  head.bodyAttrs = {
+    class:
+      "bg-green-050 text-gray-900 font-sans antialiased relative min-h-screen pb-8"
+  };
 
   // Configure Vuex
   Vue.use(Vuex);

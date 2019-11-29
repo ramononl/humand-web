@@ -1,0 +1,16 @@
+<template>
+  <g>
+    <path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2zm11 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm-8 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
+    <path class="secondary" d="M9.73 14H17a1 1 0 0 1 0 2H9.73a2 2 0 0 0 0-2zm4.54-6a2 2 0 0 0 0 2H7a1 1 0 1 1 0-2h7.27z"></path>
+  </g>
+</template>
+
+<style lang="postcss" scoped>
+  .secondary {
+    @apply text-gray-700
+  }
+
+  .active .secondary {
+    @apply text-green-900;
+  }
+</style>
