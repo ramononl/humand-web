@@ -4,7 +4,6 @@
     <div class="mt-10">
       <ViewCategory v-if="projectView === 'category'" :projectData="projectData" />
       <ViewMap v-if="projectView === 'map'" :projectData="projectData" />
-      <ViewPopular v-if="projectView === 'popular'" :projectData="projectData" />
     </div>
   </Layout>
 </template>
@@ -31,7 +30,6 @@ query AllProjects {
 import ProjectFilter from '~/components/ui/ProjectFilter.vue'
 import ViewCategory from '~/components/views/ViewCategory.vue'
 import ViewMap from '~/components/views/ViewMap.vue'
-import ViewPopular from '~/components/views/ViewPopular.vue'
 
 export default {
   metaInfo: {
@@ -40,8 +38,7 @@ export default {
   components: {
     ProjectFilter,
     ViewCategory,
-    ViewMap,
-    ViewPopular
+    ViewMap
   },
   data() {
     return {
