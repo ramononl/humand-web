@@ -1,5 +1,5 @@
 <template>
-  <AppModal :name="name">
+  <ModalTemplate>
     <template #modal-header>Create your humand account</template>
     <template #modal-body>
       <div>
@@ -18,26 +18,29 @@
         <AppButton buttonStyle="primary" buttonText="Sign in" class="inline-block w-full text-center"/>
       </div>
       <div class="mt-4">
-        <p class="text-sm text-center">Already have an account? <a href="#signin" class="underline font-bold">Sign in</a>.</p>
+        <p class="text-sm text-center">Already have an account? <button @click="showModal('ModalLogin')" class="underline font-bold">Sign in</button>.</p>
       </div>
     </template>
     <template #modal-footer>
-      Would you like to rais funds?<br/>Create an <g-link class="underline font-bold" to="/raise/">Organization account</g-link>.
+      <span>Would you like to rais funds?<br/>Create an&nbsp;</span>
+      <button v-if="$route.path === '/raise/'" @click="hideModal" class="underline font-bold">Organization account</button>
+      <g-link v-else class="underline font-bold" to="/raise/">Organization account</g-link>.
     </template>
-  </AppModal>
+  </ModalTemplate>
 </template>
 
 <script>
-import AppModal from '~/components/common/AppModal.vue'
+import { mapMutations } from "vuex";
+import ModalTemplate from "./ModalTemplate"
 
 export default {
-  props: ['name'],
-  components: {
-    AppModal
-  }
-}
+  name: 'ModalLogin',
+  components: {ModalTemplate},
+  methods: {
+    ...mapMutations([
+      "showModal",
+      "hideModal"
+    ]),
+  },
+};
 </script>
-
-<style>
-
-</style>
