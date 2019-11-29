@@ -6,32 +6,41 @@
         <slot/>
       </main>
     </transition>
-    <LoginModal name="#signin"/>
-    <SignupModal name="#signup"/>
+    <AppModal/>
   </div>
 </template>
 
 <script>
 import AppHeader from '~/components/layout/AppHeader.vue'
-import LoginModal from '~/components/common/LoginModal.vue'
-import SignupModal from '~/components/common/SignupModal.vue'
+import AppModal from "~/components/common/AppModal.vue";
 
 export default {
   components: {
     AppHeader,
-    LoginModal,
-    SignupModal
+    AppModal
   }
 }
 </script>
 
 <style lang="postcss">
 .fade-enter-active {
-  transition: opacity .5s;
+  transition: opacity .4s;
 }
 
 .fade-enter {
   opacity: 0;
+}
+
+h1 {
+  @apply text-2xl font-bold text-gray-700;
+}
+
+h2 {
+  @apply text-2xl font-bold text-gray-700;
+}
+
+h2 {
+  @apply text-xl font-bold text-gray-700;
 }
 
 p {
