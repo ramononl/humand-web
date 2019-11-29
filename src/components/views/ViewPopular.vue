@@ -1,5 +1,7 @@
 <template>
-  
+  <div>
+    <h2>Popular</h2>
+  </div>
 </template>
 
 <script>
