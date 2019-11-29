@@ -1,146 +1,148 @@
 <template>
   <div>
-    <h2>Donations of Allison Morrison</h2>
+    <div class="flex items-center">
+      <IconBase class="text-gray-500" :iconClasses="['w-10 h-10']"><IconDonations/></IconBase>
+      <h2 class="ml-2">Donations</h2>
+    </div>
     <p>Changes to your total donation amount, selected projects and splitting between projects get updated for the following month.</p>
     <h3>Total monthly donation</h3>
     <div class="text-lg text-gray-600 font-bold flex w-32 border rounded-lg overflow-hidden">
       <div class="px-3 py-2 border-r">$</div>
       <div>
-        <input class="px-3 py-2 text-right w-full h-full font-bold focus:outline-none" type="number" value="43">
+        <input class="px-3 py-2 text-right w-full h-full font-bold focus:outline-none" type="number" v-model.number="total">
       </div>
     </div>
     <h3>Your projects</h3>
     <div class="bg-gray-200 rounded-lg">
-      <div class="px-6 py-5 border-b border-white">
-        <div class="flex items-center">
+      <div class="px-6 pt-5 pb-4 border-b border-white">
+        <div class="flex items-center justify-between">
           <div class="text-lg text-gray-700">One Earth – One Ocean</div>
-          <div class="ml-3 px-1 text-xs rounded border border-gray-500 tracking-widest font-bold text-gray-500 uppercase">Donated: $ 84</div>
-          <div class="ml-3 px-1 text-xs rounded border border-red-500 tracking-widest font-bold text-red-500 uppercase">Stop donation</div>
+          <div class="ml-3 px-1 text-xs rounded border border-red-500 tracking-widest font-bold text-red-500 uppercase hover:bg-red-500 hover:text-red-100 cursor-pointer">Stop donation</div>
         </div>
-        <div class="flex items-center">
+        <div class="mt-2 flex items-center">
           <div class="flex-grow">
-            <input type="range" min="0" max="100">
+            <input type="range" min="0" max="43" v-model.number="sliders[0]" @input="input(0)" step="1">
           </div>
-          <div class="ml-6">Amount</div>
+          <div class="flex items-center px-1 py-2 w-16 ml-6 font-bold text-gray-600">
+            <div>$</div>
+            <span class="text-right w-full h-full font-bold bg-transparent focus:outline-none">{{ sliders[0] }}</span>
+          </div>
         </div>
       </div>
-      <div class="px-6 py-5 border-b border-white">
-        <div class="flex items-center">
+      <div class="px-6 pt-5 pb-4 border-b border-white">
+        <div class="flex items-center justify-between">
           <div class="text-lg text-gray-700">One Earth – One Ocean</div>
-          <div class="ml-3 px-1 text-xs rounded border border-gray-500 tracking-widest font-bold text-gray-500 uppercase">Donated: $ 84</div>
-          <div class="ml-3 px-1 text-xs rounded border border-red-500 tracking-widest font-bold text-red-500 uppercase">Stop donation</div>
+          <div class="ml-3 px-1 text-xs rounded border border-red-500 tracking-widest font-bold text-red-500 uppercase hover:bg-red-500 hover:text-red-100 cursor-pointer">Stop donation</div>
         </div>
-        <div class="flex items-center">
+        <div class="mt-2 flex items-center">
           <div class="flex-grow">
-            <input type="range" min="0" max="100">
+            <input type="range" min="0" max="43" v-model.number="sliders[1]" @input="input(1)" step="1">
           </div>
-          <div class="ml-6">Amount</div>
+          <div class="flex items-center px-1 py-2 w-16 ml-6 font-bold text-gray-600">
+            <div>$</div>
+            <span class="text-right w-full h-full font-bold bg-transparent focus:outline-none">{{ sliders[1] }}</span>
+          </div>
         </div>
       </div>
-      <div class="px-6 py-5 border-b border-white">
-        <div class="flex items-center">
+      <div class="px-6 pt-5 pb-4 border-b border-white">
+        <div class="flex items-center justify-between">
           <div class="text-lg text-gray-700">One Earth – One Ocean</div>
-          <div class="ml-3 px-1 text-xs rounded border border-gray-500 tracking-widest font-bold text-gray-500 uppercase">Donated: $ 84</div>
-          <div class="ml-3 px-1 text-xs rounded border border-red-500 tracking-widest font-bold text-red-500 uppercase">Stop donation</div>
+          <div class="ml-3 px-1 text-xs rounded border border-red-500 tracking-widest font-bold text-red-500 uppercase hover:bg-red-500 hover:text-red-100 cursor-pointer">Stop donation</div>
         </div>
-        <div class="flex items-center">
+        <div class="mt-2 flex items-center">
           <div class="flex-grow">
-            <input type="range" min="0" max="100">
+            <input type="range" min="0" max="43" v-model.number="sliders[2]" @input="input(2)" step="1">
           </div>
-          <div class="ml-6">Amount</div>
+          <div class="flex items-center px-1 py-2 w-16 ml-6 font-bold text-gray-600">
+            <div>$</div>
+            <span class="text-right w-full h-full font-bold bg-transparent focus:outline-none">{{ sliders[2] }}</span>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<style scoped>
+<script>
+export default {
+  data() {
+    return {
+      total: 43,
+      sliders: [5,25,13]
+    }
+  },
+  methods: {
+    input(n){
+      const sum = this.sliders.reduce((sum, val) => sum + val, 0)
+      const diff = sum - this.total
+      let remainder = 0
+      for(let i in this.sliders){
+      	if(i != n){ //don't modify the slider which is being dragged
+          let val = this.sliders[i] - diff / (this.sliders.length - 1)
+          if(val < 0){
+            remainder += val
+            val = 0
+          }
+          this.$set(this.sliders, i, val)
+        }
+      }
+      if(remainder){
+        const filteredLength = this.sliders.filter((val, key) => val > 0 && key != n).length
+        for(let i in this.sliders){
+          if(i != n && this.sliders[i] > 0){
+            this.$set(this.sliders, i, this.sliders[i] + remainder / filteredLength)
+          }
+        }
+      }
+    }
+  }
+}
+</script>
+
+<style lang="postcss" scoped>
 input[type=range] {
   -webkit-appearance: none;
-  margin: 18px 0;
-  width: 100%;
+  @apply my-2 w-full;
 }
 input[type=range]:focus {
-  outline: none;
+  @apply outline-none;
 }
 input[type=range]::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 8.4px;
-  cursor: pointer;
   animate: 0.2s;
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  background: #3071a9;
-  border-radius: 1.3px;
-  border: 0.2px solid #010101;
+  @apply w-full cursor-pointer h-2 bg-gray-400 rounded-full;
 }
 input[type=range]::-webkit-slider-thumb {
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  border: 1px solid #000000;
-  height: 36px;
-  width: 16px;
-  border-radius: 3px;
-  background: #ffffff;
-  cursor: pointer;
+  @apply -mt-2 cursor-pointer bg-gray-700 w-6 h-6 rounded-full;
   -webkit-appearance: none;
-  margin-top: -14px;
 }
 input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #367ebd;
+  @apply bg-gray-400;
 }
 input[type=range]::-moz-range-track {
-  width: 100%;
-  height: 8.4px;
-  cursor: pointer;
   animate: 0.2s;
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  background: #3071a9;
-  border-radius: 1.3px;
-  border: 0.2px solid #010101;
+  @apply w-full cursor-pointer h-2 bg-gray-400 rounded-full;
 }
 input[type=range]::-moz-range-thumb {
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  border: 1px solid #000000;
-  height: 36px;
-  width: 16px;
-  border-radius: 3px;
-  background: #ffffff;
-  cursor: pointer;
+  @apply -mt-2 cursor-pointer bg-gray-700 w-6 h-6 rounded-full;
 }
 input[type=range]::-ms-track {
-  width: 100%;
-  height: 8.4px;
-  cursor: pointer;
   animate: 0.2s;
-  background: transparent;
-  border-color: transparent;
-  border-width: 16px 0;
-  color: transparent;
+  @apply w-full cursor-pointer h-2 bg-transparent border-transparent text-transparent rounded-full;
+  border-width: 1rem 0;
 }
 input[type=range]::-ms-fill-lower {
-  background: #2a6495;
-  border: 0.2px solid #010101;
-  border-radius: 2.6px;
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  @apply bg-gray-400 rounded-full;
 }
 input[type=range]::-ms-fill-upper {
-  background: #3071a9;
-  border: 0.2px solid #010101;
-  border-radius: 2.6px;
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  @apply bg-gray-400 rounded-full;
 }
 input[type=range]::-ms-thumb {
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  border: 1px solid #000000;
-  height: 36px;
-  width: 16px;
-  border-radius: 3px;
-  background: #ffffff;
-  cursor: pointer;
+  @apply cursor-pointer bg-gray-700 w-6 h-6 rounded-full;
 }
 input[type=range]:focus::-ms-fill-lower {
-  background: #3071a9;
+  @apply bg-gray-400;
 }
 input[type=range]:focus::-ms-fill-upper {
-  background: #367ebd;
+  @apply bg-gray-400;
 }
 </style>
