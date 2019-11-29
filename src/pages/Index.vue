@@ -11,8 +11,8 @@
         <h1 class="xl:mt-8 text-3xl xl:text-4xl leading-snug font-black text-green-100">Make your choice.<br/>Support meaningful projects.</h1>
         <p class="mt-3 font-black text-green-200">Monthly charity subscription service</p>
         <div class="mt-8 md:flex">
-          <AppButton link="/about" buttonText="How does it work?" buttonStyle="primary-light"/>
-          <AppButton link="#signup" buttonText="Become a humand" iconComp="iconArrowRight" buttonStyle="primary-light-outline" class="block mt-3 md:mt-0 md:ml-3" @click.native="signupModalOpen = true"/>
+          <AppButton to="/about/" buttonText="How does it work?" buttonStyle="primary-light"/>
+          <AppButton v-if="!this.$store.state.loggedIn" @click.native="showModal('ModalSignup')" buttonText="Become a humand" iconComp="iconArrowRight" buttonStyle="primary-light-outline" class="block mt-3 md:mt-0 md:ml-3"/>
         </div>
       </div>
     </div>
@@ -21,6 +21,7 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex';
 import SwooshShape from '~/components/common/SwooshShape.vue'
 
 export default {
@@ -29,7 +30,10 @@ export default {
   },
   components: {
     SwooshShape
-  }
+  },
+  methods: {
+    ...mapMutations(['showModal']),
+  },
 }
 </script>
 
