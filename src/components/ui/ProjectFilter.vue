@@ -31,22 +31,20 @@
       </div>
     </div>
     <div class="mt-4 xl:mt-0 inline-flex border border-gray-500 rounded-lg overflow-hidden">
-      <div class="self-center px-5 py-2 text-green-500 font-bold text-sm">View</div>
       <button
         @click="changeView('category')"
         :class="projectView === 'category' ? 'bg-green-500 text-green-100' : ''"
-        class="px-5 py-2 text-sm text-gray-500 font-bold border-l border-r border-gray-500 focus:outline-none transition-all"
-      >Category</button>
+        class="px-5 py-2 text-sm text-gray-500 font-bold border-r border-gray-500 focus:outline-none transition-all"
+      >
+        <IconBase :iconClasses="[projectView === 'category' ? 'active' : '', 'w-5 h-5']"><IconCollection/></IconBase>
+      </button>
       <button
         @click="changeView('map')"
         :class="projectView === 'map' ? 'bg-green-500 text-green-100' : ''"
-        class="px-5 py-2 text-sm text-gray-500 font-bold border-r border-gray-500 focus:outline-none transition-all"
-      >Map</button>
-      <button
-        @click="changeView('popular')"
-        :class="projectView === 'popular' ? 'bg-green-500 text-green-100' : ''"
-        class="px-5 py-2 text-sm text-gray-500 font-bold focus:outline-none transition-all"
-      >Popular</button>
+        class="px-5 py-2 text-sm text-gray-500 font-bold border-gray-500 focus:outline-none transition-all"
+      >
+        <IconBase :iconClasses="[projectView === 'map' ? 'active' : '', 'w-5 h-5']"><IconMap/></IconBase>
+      </button>
     </div>
   </div>
 </template>
