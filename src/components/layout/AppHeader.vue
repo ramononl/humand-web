@@ -36,10 +36,10 @@
           <button @click="profileMenuOpen = false" type="button" class="z-10 block fixed inset-0 w-full h-full cursor-default"></button>
           <div class="absolute right-0 mt-3 w-56 bg-white shadow-lg z-10 border-gray-300 rounded-lg border">
             <div class="p-6 border-b">
-              <g-link class="block text-xl lg:text-base font-bold text-gray-700 hover:text-gray-500 transition-all" to="/settings/">Dashboard</g-link>
-              <g-link class="block mt-3 text-xl lg:text-base font-bold text-gray-700 hover:text-gray-500 transition-all" to="/settings/">Inbox</g-link>
-              <g-link class="block mt-3 text-xl lg:text-base font-bold text-gray-700 hover:text-gray-500 transition-all" to="/settings/">Donations</g-link>
-              <g-link class="block mt-3 text-xl lg:text-base font-bold text-gray-700 hover:text-gray-500 transition-all" to="/settings/">Settings</g-link>
+              <g-link class="block text-xl lg:text-base font-bold text-gray-700 hover:text-gray-500 transition-all" to="/settings/#dashboard">Dashboard</g-link>
+              <g-link class="block mt-3 text-xl lg:text-base font-bold text-gray-700 hover:text-gray-500 transition-all" to="/settings/#inbox">Inbox</g-link>
+              <g-link class="block mt-3 text-xl lg:text-base font-bold text-gray-700 hover:text-gray-500 transition-all" to="/settings/#donations">Donations</g-link>
+              <g-link class="block mt-3 text-xl lg:text-base font-bold text-gray-700 hover:text-gray-500 transition-all" to="/settings/#settings">Settings</g-link>
             </div>
             <div class="p-6">
               <AppButton @click.native="logout" buttonStyle="secondary" buttonText="Logout" iconComp="iconLogout" class="w-full justify-center"/>
