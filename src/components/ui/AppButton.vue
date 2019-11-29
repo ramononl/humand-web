@@ -1,13 +1,22 @@
 <template>
-  <a :href="link" :class="[buttonStyle, iconComp ? 'inline-flex items-center' : 'inline-block']" class="px-4 py-2 rounded-lg border-2 font-bold tracking-widest uppercase focus:outline-none transition-all">
+  <component :is="type" :to="to" :class="[buttonStyle, iconComp ? 'inline-flex items-center' : 'inline-block']" class="px-4 py-2 rounded-lg border-2 font-bold tracking-widest uppercase focus:outline-none transition-all">
     {{ buttonText }}
     <IconBase v-if="iconComp" :iconClasses="['w-5 h-5']" class="ml-2 flex-shrink-0"><component :is="iconComp"/></IconBase>
-  </a>
+  </component>
 </template>
 
 <script>
 export default {
-  props: ['link', 'buttonText', 'buttonStyle', 'iconComp']
+  props: ["to", "buttonText", "buttonStyle", "iconComp"],
+  computed: {
+    type() {
+      if (this.to) {
+        return "g-link"
+      } else {
+        return "button";
+      }
+    }
+  }
 }
 </script>
 
