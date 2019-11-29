@@ -1,5 +1,5 @@
 <template>
-  <div class="w-80 mr-8 flex-shrink-0">
+  <div class="mt-5 px-2 flex-none max-w-80">
     <g-link :to="cardData.path" class="group">
       <g-image :src="cardData.image" :alt="cardData.title" class="rounded-lg shadow-md group-hover:opacity-75 transition-all"/>
       <div class="relative px-4 -mt-16 transition-all">

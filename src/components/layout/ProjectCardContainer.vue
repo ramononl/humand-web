@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-5 flex items-center relative">
+  <div class="-mx-2 flex flex-wrap items-center justify-center md:justify-start relative">
     <slot/>
   </div>
 </template>
