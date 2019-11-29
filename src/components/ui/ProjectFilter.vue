@@ -7,11 +7,10 @@
         </svg>
         <input class="bg-transparent text-sm text-gray-500 font-bold focus:outline-none pl-2 py-2 block w-full appearance-none leading-normal" type="search" placeholder="Search projects...">
       </div>
-      <div class="mt-2 md:mt-0 inline-block relative flex-1 border rounded-lg border-gray-500 md:border-0">
+      <div class="relative flex items-center mt-2 md:mt-0 inline-block relative flex-1 border rounded-lg border-gray-500 md:border-0">
         <select class="bg-transparent block appearance-none focus:outline-none w-full px-5 py-2 pr-8 text-sm text-gray-500 font-bold">
-          <option selected>All categories</option>
-          <option>Option 2</option>
-          <option>Option 3</option>
+          <option selected>All Categories</option>
+          <option v-for="category in categories" :key="category">{{ category }}</option>
         </select>
         <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-green-500">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 h-8 fill-current">
@@ -21,9 +20,8 @@
       </div>
       <div class="mt-2 md:mt-0 inline-block relative flex-1 border rounded-lg md:rounded-none md:border-l md:border-t-0 md:border-r-0 md:border-b-0 border-gray-500">
         <select class="bg-transparent block appearance-none focus:outline-none w-full px-5 py-2 pr-8 text-sm text-gray-500 font-bold">
-          <option selected>All regions</option>
-          <option>Option 2</option>
-          <option>Option 3</option>
+          <option selected>All Regions</option>
+          <option v-for="region in regions" :key="region">{{ region }}</option>
         </select>
         <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-green-500">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 h-8 fill-current">
@@ -57,7 +55,29 @@
 export default {
   data() {
     return {
-      projectView: "category"
+      projectView: "category",
+      categories: [
+        'Animals',
+        'Arts & Culture',
+        'Community Development',
+        'Education',
+        'Environment',
+        'Health',
+        'Human Rights',
+        'Human Services',
+        'International',
+        'Research',
+        'Religion'
+      ],
+      regions: [
+        'Africa',
+        'Antarctica',
+        'Australia',
+        'Asia',
+        'Europe',
+        'North America',
+        'South America'
+      ]
     };
   },
   methods: {
