@@ -2,7 +2,7 @@
   <div>
     <div class="flex items-center">
       <h2>Environment</h2>
-      <div class="ml-3 px-1 hover:bg-gray-500 text-xxs rounded border border-gray-500 tracking-widest font-bold text-gray-500 hover:text-gray-100 uppercase">View all</div>
+      <div class="ml-3 px-1 cursor-pointer hover:bg-gray-500 text-xxs rounded border border-gray-500 tracking-widest font-bold text-gray-500 hover:text-gray-100 uppercase">View all</div>
     </div>
     <p class="mt-1 text-gray-600">Donate for environmental protection! Whether climate change, water pollution or environmental policy.</p>
     <ProjectCardContainer>
@@ -10,9 +10,7 @@
     </ProjectCardContainer>
     <div class="mt-10 flex items-center">
       <h2>Children and youth</h2>
-      <div class="ml-3 px-1 text-xxs rounded border border-gray-500">
-        <span class="tracking-widest font-bold text-gray-500 uppercase">View all</span>
-      </div>
+      <div class="ml-3 px-1 cursor-pointer hover:bg-gray-500 text-xxs rounded border border-gray-500 tracking-widest font-bold text-gray-500 hover:text-gray-100 uppercase">View all</div>
     </div>
     <p class="mt-1 text-gray-600">Let all children be happy! Donate now for children and youth projects.</p>
     <ProjectCardContainer>
