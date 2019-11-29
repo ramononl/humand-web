@@ -1,9 +1,11 @@
 <template>
   <Layout>
     <ProjectFilter @setParentProjectView="setProjectView"/>
-    <ViewCategory v-if="projectView === 'category'" :projectData="projectData" />
-    <ViewMap v-if="projectView === 'map'" :projectData="projectData" />
-    <ViewPopular v-if="projectView === 'popular'" :projectData="projectData" />
+    <div class="mt-10">
+      <ViewCategory v-if="projectView === 'category'" :projectData="projectData" />
+      <ViewMap v-if="projectView === 'map'" :projectData="projectData" />
+      <ViewPopular v-if="projectView === 'popular'" :projectData="projectData" />
+    </div>
   </Layout>
 </template>
 
