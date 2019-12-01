@@ -2,8 +2,8 @@
   <header class="py-10 flex justify-between items-center">
     <div class="flex justify-between items-center">
       <g-link to="/" class="flex items-center group">
-        <AppLogo class="w-12 text-gray-700 group-hover:text-gray-600 transition-all"/>
-        <span class="ml-3 text-gray-700 group-hover:text-gray-600 text-4xl font-black transition-all">humand</span>
+        <AppLogo class="w-16 sm:w-12 text-gray-700 group-hover:text-gray-600 transition-all"/>
+        <span class="ml-3 hidden sm:inline-block text-gray-700 group-hover:text-gray-600 text-4xl font-black transition-all">humand</span>
       </g-link>
     </div>
     <div class="flex flex-row-reverse lg:flex-row items-center">
