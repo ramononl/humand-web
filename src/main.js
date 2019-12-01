@@ -101,8 +101,7 @@ export default function(Vue, { router, head, isClient, appOptions }) {
       createPersistedState({
         storage: {
           getItem: key => Cookies.get(key),
-          setItem: (key, value) =>
-            Cookies.set(key, value, { expires: 3, secure: true }),
+          setItem: (key, value) => Cookies.set(key, value, { expires: 3 }),
           removeItem: key => Cookies.remove(key)
         }
       })
