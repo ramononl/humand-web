@@ -67,37 +67,39 @@ export default function(Vue, { router, head, isClient, appOptions }) {
   // Configure Vuex
   Vue.use(Vuex);
 
-  appOptions.store = new Vuex.Store({
-    state: {
-      loggedIn: false,
-      appUser: {
-        name: "Allison Morrison",
-        email: "alli.morrison@gmail.com",
-        password: "congratulations"
+  if (process.isClient) {
+    appOptions.store = new Vuex.Store({
+      state: {
+        loggedIn: false,
+        appUser: {
+          name: "Allison Morrison",
+          email: "alli.morrison@gmail.com",
+          password: "congratulations"
+        },
+        modalVisible: false,
+        modalComponent: null
       },
-      modalVisible: false,
-      modalComponent: null
-    },
-    mutations: {
-      showModal(state, componentName) {
-        state.modalVisible = true;
-        state.modalComponent = componentName;
+      mutations: {
+        showModal(state, componentName) {
+          state.modalVisible = true;
+          state.modalComponent = componentName;
+        },
+        hideModal(state) {
+          state.modalVisible = false;
+          state.modalComponent = null;
+        },
+        userLogin(state) {
+          state.loggedIn = true;
+        },
+        userLogout(state) {
+          state.loggedIn = false;
+        }
       },
-      hideModal(state) {
-        state.modalVisible = false;
-        state.modalComponent = null;
-      },
-      userLogin(state) {
-        state.loggedIn = true;
-      },
-      userLogout(state) {
-        state.loggedIn = false;
-      }
-    },
-    actions: {},
-    getters: {},
-    plugins: [createPersistedState()]
-  });
+      actions: {},
+      getters: {},
+      plugins: [createPersistedState()]
+    });
+  }
 
   // Configure NProgress
   NProgress.configure({ showSpinner: false });
