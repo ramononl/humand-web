@@ -42,9 +42,9 @@ export default {
         this.hideModal();
       }
     };
-    document.addEventListener(`keydown`, escapeHandler);
+    window.addEventListener(`keydown`, escapeHandler);
     this.$once(`hook:destroyed`, () => {
-      document.removeEventListener(`keydown`, escapeHandler);
+      window.removeEventListener(`keydown`, escapeHandler);
     });
   },
   methods: {
