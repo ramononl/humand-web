@@ -69,7 +69,7 @@ export default function(Vue, { router, head, isClient, appOptions }) {
 
   const plugins = [];
   if (process.isClient) {
-    plugins.push(createPersistedState());
+    plugins = [createPersistedState()];
   }
 
   appOptions.store = new Vuex.Store({
