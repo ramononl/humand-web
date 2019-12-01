@@ -67,54 +67,57 @@ export default function(Vue, { router, head, isClient, appOptions }) {
   // Configure Vuex
   Vue.use(Vuex);
 
+  const plugins = [];
   if (process.isClient) {
-    appOptions.store = new Vuex.Store({
-      state: {
-        loggedIn: false,
-        appUser: {
-          name: "Allison Morrison",
-          email: "alli.morrison@gmail.com",
-          password: "congratulations"
-        },
-        modalVisible: false,
-        modalComponent: null
-      },
-      mutations: {
-        showModal(state, componentName) {
-          state.modalVisible = true;
-          state.modalComponent = componentName;
-        },
-        hideModal(state) {
-          state.modalVisible = false;
-          state.modalComponent = null;
-        },
-        userLogin(state) {
-          state.loggedIn = true;
-        },
-        userLogout(state) {
-          state.loggedIn = false;
-        }
-      },
-      actions: {},
-      getters: {},
-      plugins: [createPersistedState()]
-    });
-
-    // Configure NProgress
-    NProgress.configure({ showSpinner: false });
-
-    router.beforeEach((to, from, next) => {
-      if (from.name !== null) {
-        NProgress.start();
-      }
-      next();
-    });
-
-    router.afterEach((to, from) => {
-      // NProgress
-      NProgress.done();
-      // Store
-      appOptions.store.commit("hideModal");
-    });
+    plugins.push(createPersistedState());
   }
+
+  appOptions.store = new Vuex.Store({
+    state: {
+      loggedIn: false,
+      appUser: {
+        name: "Allison Morrison",
+        email: "alli.morrison@gmail.com",
+        password: "congratulations"
+      },
+      modalVisible: false,
+      modalComponent: null
+    },
+    mutations: {
+      showModal(state, componentName) {
+        state.modalVisible = true;
+        state.modalComponent = componentName;
+      },
+      hideModal(state) {
+        state.modalVisible = false;
+        state.modalComponent = null;
+      },
+      userLogin(state) {
+        state.loggedIn = true;
+      },
+      userLogout(state) {
+        state.loggedIn = false;
+      }
+    },
+    actions: {},
+    getters: {},
+    plugins: plugins
+  });
+
+  // Configure NProgress
+  NProgress.configure({ showSpinner: false });
+
+  router.beforeEach((to, from, next) => {
+    if (from.name !== null) {
+      NProgress.start();
+    }
+    next();
+  });
+
+  router.afterEach((to, from) => {
+    // NProgress
+    NProgress.done();
+    // Store
+    appOptions.store.commit("hideModal");
+  });
 }
