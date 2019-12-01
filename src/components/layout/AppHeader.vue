@@ -27,7 +27,7 @@
           </div>
         </div>
       </div>
-      <AppButton v-if="!this.$store.state.loggedIn" @click.native="showModal('ModalLogin')" buttonStyle="secondary" buttonText="Login" iconComp="iconUser"/>
+      <AppButton v-show="!this.$store.state.loggedIn" @click.native="showModal('ModalLogin')" buttonStyle="secondary" buttonText="Login" iconComp="iconUser"/>
       <div v-if="this.$store.state.loggedIn" class="relative">
         <button @click="profileMenuOpen = !profileMenuOpen" type="button" class="block focus:outline-none">
           <g-image class="w-12 rounded-full border-2 border-orange-500" src="~/assets/images/profile.jpeg"/>
