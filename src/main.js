@@ -3,6 +3,7 @@
 
 import Vuex from "vuex";
 import createPersistedState from "vuex-persistedstate";
+import Cookies from "js-cookie";
 import NProgress from "nprogress";
 import "~/assets/css/custom_nprogress.css";
 require("typeface-lato");
@@ -96,7 +97,16 @@ export default function(Vue, { router, head, isClient, appOptions }) {
     },
     actions: {},
     getters: {},
-    plugins: [createPersistedState()]
+    plugins: [
+      createPersistedState({
+        storage: {
+          getItem: key => Cookies.get(key),
+          setItem: (key, value) =>
+            Cookies.set(key, value, { expires: 3, secure: true }),
+          removeItem: key => Cookies.remove(key)
+        }
+      })
+    ]
   });
 
   // Configure NProgress
