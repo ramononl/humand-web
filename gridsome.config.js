@@ -36,8 +36,5 @@ module.exports = {
   },
   templates: {
     ProjectPage: "/projects/:title"
-  },
-  chainWebpack(config) {
-    config.mode("development");
   }
 };

@@ -67,11 +67,6 @@ export default function(Vue, { router, head, isClient, appOptions }) {
   // Configure Vuex
   Vue.use(Vuex);
 
-  let plugins = [];
-  if (process.isClient) {
-    plugins = [createPersistedState()];
-  }
-
   appOptions.store = new Vuex.Store({
     state: {
       loggedIn: false,
@@ -101,7 +96,7 @@ export default function(Vue, { router, head, isClient, appOptions }) {
     },
     actions: {},
     getters: {},
-    plugins: plugins
+    plugins: [createPersistedState()]
   });
 
   // Configure NProgress
