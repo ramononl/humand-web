@@ -1,19 +1,17 @@
 <template>
-  <ClientOnly>
-    <transition name="fade">
-      <div v-if="visible" class="fixed overflow-y-auto inset-0 flex justify-center bg-semi-75 z-50">
-        <button @click="hideModal" class="absolute w-full h-full cursor-default"></button>
-        <div class="mt-20 p-4 relative w-112 max-w-full self-start">
-          <div class="flex justify-end">
-            <button @click="hideModal" class="focus:outline-none">
-              <IconBase class="text-white" :iconClasses="['w-12 h-12']"><IconClose/></IconBase>
-            </button>
-          </div>
-          <component :is="component"></component>
+  <transition name="fade">
+    <div v-if="visible" class="fixed overflow-y-auto inset-0 flex justify-center bg-semi-75 z-50">
+      <button @click="hideModal" class="absolute w-full h-full cursor-default"></button>
+      <div class="mt-20 p-4 relative w-112 max-w-full self-start">
+        <div class="flex justify-end">
+          <button @click="hideModal" class="focus:outline-none">
+            <IconBase class="text-white" :iconClasses="['w-12 h-12']"><IconClose/></IconBase>
+          </button>
         </div>
+        <component :is="component"></component>
       </div>
-    </transition>
-  </ClientOnly>
+    </div>
+  </transition>
 </template>
 
 <script>
