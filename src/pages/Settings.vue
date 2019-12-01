@@ -6,16 +6,7 @@
         <p class="mt-0">All your donations, news and settings in one place.</p>
       </div>
       <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-        <div class="md:flex">
-          <div class="md:w-8/12 px-6 sm:px-8 md:px-12 py-10 flex-shrink-0">
-            <ViewDashboard v-if="view === '#dashboard'"/>
-            <ViewInbox v-if="view === '#inbox'"/>
-            <ViewDonations v-if="view === '#donations'"/>
-            <ViewSettings v-if="view === '#settings'"/>
-            <ViewPayment v-if="view === '#payment'"/>
-            <ViewAnalytics v-if="view === '#analytics'"/>
-            <ViewNotifications v-if="view === '#notifications'"/>
-          </div>
+        <div class="md:flex md:flex-row-reverse">
           <div class="md:w-4/12 px-6 sm:px-8 py-10 flex-shrink-0 md:border-l border-gray-300">
             <div class="border border-gray-500 rounded-lg overflow-hidden">
               <a href="#dashboard" :class="[view === '#dashboard' ? 'active text-green-100 bg-green-500' : 'text-gray-600']" class="flex items-center w-full pl-3 pr-4 py-2 text-left text-sm focus:outline-none border-b border-gray-500">
@@ -49,6 +40,15 @@
                 <span class="ml-2 font-semibold">Notifications</span>
               </a>
             </div>
+          </div>
+          <div class="md:w-8/12 px-6 sm:px-8 md:px-12 py-10 flex-shrink-0">
+            <ViewDashboard v-if="view === '#dashboard'"/>
+            <ViewInbox v-if="view === '#inbox'"/>
+            <ViewDonations v-if="view === '#donations'"/>
+            <ViewSettings v-if="view === '#settings'"/>
+            <ViewPayment v-if="view === '#payment'"/>
+            <ViewAnalytics v-if="view === '#analytics'"/>
+            <ViewNotifications v-if="view === '#notifications'"/>
           </div>
         </div>
       </div>
