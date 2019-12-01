@@ -36,17 +36,6 @@ export default {
       modalComponent: 'modalComponent',
     })
   },
-  mounted() {
-    const escapeHandler = (e) => {
-      if (e.key === `Escape` && this.visible) {
-        this.hideModal();
-      }
-    };
-    window.addEventListener(`keydown`, escapeHandler);
-    this.$once(`hook:destroyed`, () => {
-      window.removeEventListener(`keydown`, escapeHandler);
-    });
-  },
   methods: {
     ...mapMutations(['hideModal']),
   },
