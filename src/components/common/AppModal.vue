@@ -36,7 +36,7 @@ export default {
       modalComponent: 'modalComponent',
     })
   },
-  created() {
+  mounted() {
     const escapeHandler = (e) => {
       if (e.key === `Escape` && this.visible) {
         this.hideModal();
