@@ -67,7 +67,7 @@ export default function(Vue, { router, head, isClient, appOptions }) {
   // Configure Vuex
   Vue.use(Vuex);
 
-  const plugins = [];
+  let plugins = [];
   if (process.isClient) {
     plugins = [createPersistedState()];
   }
