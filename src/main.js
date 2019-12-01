@@ -99,22 +99,22 @@ export default function(Vue, { router, head, isClient, appOptions }) {
       getters: {},
       plugins: [createPersistedState()]
     });
+
+    // Configure NProgress
+    NProgress.configure({ showSpinner: false });
+
+    router.beforeEach((to, from, next) => {
+      if (from.name !== null) {
+        NProgress.start();
+      }
+      next();
+    });
+
+    router.afterEach((to, from) => {
+      // NProgress
+      NProgress.done();
+      // Store
+      appOptions.store.commit("hideModal");
+    });
   }
-
-  // Configure NProgress
-  NProgress.configure({ showSpinner: false });
-
-  router.beforeEach((to, from, next) => {
-    if (from.name !== null) {
-      NProgress.start();
-    }
-    next();
-  });
-
-  router.afterEach((to, from) => {
-    // NProgress
-    NProgress.done();
-    // Store
-    appOptions.store.commit("hideModal");
-  });
 }
