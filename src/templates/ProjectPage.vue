@@ -65,10 +65,10 @@
         </div>
         <div class="px-6 sm:px-8 md:px-12 pt-10 pb-16">
           <h3 class="text-xl font-bold text-gray-700">Similar projects</h3>
-          <div class="-mx-2 flex">
+          <div class="-mx-2 sm:flex flex-wrap lg:flex-no-wrap">
             <div class="mt-5 px-2 max-w-80">
               <g-link to="/projects/make-the-ageless-wisdom-of-tibet-available-to-all/" class="group">
-                <g-image src="~/projects/images/tibet_agless_wisdom.jpg" width="500" height="350" class="rounded-lg shadow-md group-hover:opacity-75 transition-all"/>
+                <g-image src="~/projects/images/tibet_agless_wisdom.jpg" width="500" height="350" fit="cover" class="rounded-lg shadow-md group-hover:opacity-75 transition-all"/>
                 <div class="relative px-4 -mt-16 transition-all">
                   <div class="bg-white rounded-lg px-4 py-4 shadow-lg h-32 flex flex-col justify-between">
                     <div>
@@ -81,7 +81,7 @@
             </div>
             <div class="mt-5 px-2 max-w-80">
               <g-link to="/projects/make-the-ageless-wisdom-of-tibet-available-to-all/" class="group">
-                <g-image src="~/projects/images/safe_the_cheetahs.jpg" width="500" height="350" class="rounded-lg shadow-md group-hover:opacity-75 transition-all"/>
+                <g-image src="~/projects/images/safe_the_cheetahs.jpg" width="500" height="350" fit="cover" class="rounded-lg shadow-md group-hover:opacity-75 transition-all"/>
                 <div class="relative px-4 -mt-16 transition-all">
                   <div class="bg-white rounded-lg px-4 py-4 shadow-lg h-32 flex flex-col justify-between">
                     <div>
@@ -94,7 +94,7 @@
             </div>
             <div class="mt-5 px-2 max-w-80">
               <g-link to="/projects/make-the-ageless-wisdom-of-tibet-available-to-all/" class="group">
-                <g-image src="~/projects/images/primeval_forests.jpg" width="500" height="350" class="rounded-lg shadow-md group-hover:opacity-75 transition-all"/>
+                <g-image src="~/projects/images/primeval_forests.jpg" width="500" height="350" fit="cover" class="rounded-lg shadow-md group-hover:opacity-75 transition-all"/>
                 <div class="relative px-4 -mt-16 transition-all">
                   <div class="bg-white rounded-lg px-4 py-4 shadow-lg h-32 flex flex-col justify-between">
                     <div>
