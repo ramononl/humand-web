@@ -4,7 +4,7 @@
       <IconBase class="text-gray-500" :iconClasses="['w-10 h-10']"><IconDonations/></IconBase>
       <h2 class="ml-2">Donations</h2>
     </div>
-    <p>Changes to your total donation amount, selected projects and splitting between projects get updated for the following month.</p>
+    <p>Make changes to your total donation amount, selected projects and splitting between projects.</p>
     <h3>Total monthly donation</h3>
     <div class="text-lg text-gray-600 font-bold flex w-32 border rounded-lg overflow-hidden">
       <div class="px-3 py-2 border-r">$</div>

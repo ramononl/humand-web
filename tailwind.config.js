@@ -3,7 +3,14 @@ const { colors } = require("tailwindcss/defaultTheme");
 module.exports = {
   theme: {
     fontFamily: {
-      sans: ["Lato", "system-ui", "BlinkMacSystemFont", "-apple-system", "Segoe UI", "sans-serif"]
+      sans: [
+        "Lato",
+        "system-ui",
+        "BlinkMacSystemFont",
+        "-apple-system",
+        "Segoe UI",
+        "sans-serif"
+      ]
     },
     extend: {
       colors: {
@@ -64,7 +71,9 @@ module.exports = {
   variants: {
     textColor: ["responsive", "hover", "focus", "group-hover"],
     backgroundColor: ["responsive", "hover", "focus", "active", "group-hover"],
-    opacity: ["responsive", "hover", "focus", "active", "group-hover"]
+    opacity: ["responsive", "hover", "focus", "active", "group-hover"],
+    display: ["responsive", "hover", "focus", "active", "group-hover"],
+    borderColor: ["responsive", "hover", "focus", "active", "group-hover"]
   },
   plugins: [require("tailwindcss-transitions")()]
 };

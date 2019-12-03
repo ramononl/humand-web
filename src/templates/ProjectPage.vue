@@ -40,10 +40,10 @@
               <div v-html="$page.projectPage.content" class="mt-3 text-gray-700"/>
             </article>
           </div>
-          <div class="md:w-4/12 px-6 sm:px-8 py-10 flex-shrink-0 md:border-l border-gray-300">
+          <div class="md:w-4/12 px-6 sm:px-8 py-10 flex-shrink-0 md:border-l">
             <AppButton link="#signin" buttonStyle="secondary" buttonText="Support this project" class="text-sm inline-block w-full text-center"/>
             <div class="mt-4">
-              <p class="text-sm">Join <span class="font-bold">{{ $page.projectPage.supporters }} other humands</span> supporting this project.</p>
+              <p class="text-sm">Join the <span class="font-bold">{{ $page.projectPage.supporters }} other humands</span> supporting this project.</p>
               <div class="mt-2 flex flex-wrap">
                 <IconBase v-for="i in numberOfUserIcons" :key="i" class="text-green-500" :iconClasses="['w-6 h-6']"><IconUser/></IconBase>
               </div>

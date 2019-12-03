@@ -7,13 +7,9 @@
       </div>
       <div class="bg-white shadow-lg rounded-lg overflow-hidden">
         <div class="md:flex md:flex-row-reverse">
-          <div class="md:w-4/12 px-6 sm:px-8 py-10 flex-shrink-0 md:border-l border-gray-300">
-            <div class="border border-gray-500 rounded-lg overflow-hidden">
-              <a href="#dashboard" :class="[view === '#dashboard' ? 'active text-green-100 bg-green-500' : 'text-gray-600']" class="flex items-center w-full pl-3 pr-4 py-2 text-left text-sm focus:outline-none border-b border-gray-500">
-                <IconBase :class="[view === '#dashboard' ? 'text-green-700' : 'text-gray-500']" :iconClasses="['w-6 h-6']"><IconDashboard/></IconBase>
-                <span class="ml-2 font-semibold">Dashboard</span>
-              </a>
-              <a href="#inbox" :class="[view === '#inbox' ? 'active text-green-100 bg-green-500' : 'text-gray-600']" class="flex items-center w-full pl-3 pr-4 py-2 text-left text-sm focus:outline-none border-b border-gray-500">
+          <div class="md:w-4/12 px-6 sm:px-8 py-10 flex-shrink-0 md:border-l">
+            <div class="border rounded-lg overflow-hidden">
+              <a href="#inbox" :class="[view === '#inbox' ? 'active text-green-100 bg-green-500' : 'text-gray-600']" class="flex items-center w-full pl-3 pr-4 py-2 text-left text-sm focus:outline-none border-b">
                 <IconBase :class="[view === '#inbox' ? 'text-green-700' : 'text-gray-500']" :iconClasses="['w-6 h-6']"><IconInbox/></IconBase>
                 <span class="ml-2 font-semibold">Inbox</span>
               </a>
@@ -22,16 +18,16 @@
                 <span class="ml-2 font-semibold">Donations</span>
               </a>
             </div>
-            <div class="mt-6 border border-gray-500 rounded-lg overflow-hidden">
-              <a href="#settings" :class="[view === '#settings' ? 'active text-green-100 bg-green-500' : 'text-gray-600']" class="flex items-center w-full pl-3 pr-4 py-2 text-left text-sm focus:outline-none border-b border-gray-500">
+            <div class="mt-6 border rounded-lg overflow-hidden">
+              <a href="#settings" :class="[view === '#settings' ? 'active text-green-100 bg-green-500' : 'text-gray-600']" class="flex items-center w-full pl-3 pr-4 py-2 text-left text-sm focus:outline-none border-b">
                 <IconBase :class="[view === '#settings' ? 'text-green-700' : 'text-gray-500']" :iconClasses="['w-6 h-6']"><IconSettings/></IconBase>
                 <span class="ml-2 font-semibold">Settings</span>
               </a>
-              <a href="#payment" :class="[view === '#payment' ? 'active text-green-100 bg-green-500' : 'text-gray-600']" class="flex items-center w-full pl-3 pr-4 py-2 text-left text-sm focus:outline-none border-b border-gray-500">
+              <a href="#payment" :class="[view === '#payment' ? 'active text-green-100 bg-green-500' : 'text-gray-600']" class="flex items-center w-full pl-3 pr-4 py-2 text-left text-sm focus:outline-none border-b">
                 <IconBase :class="[view === '#payment' ? 'text-green-700' : 'text-gray-500']" :iconClasses="['w-6 h-6']"><IconPayment/></IconBase>
                 <span class="ml-2 font-semibold">Payment</span>
               </a>
-              <a href="#analytics" :class="[view === '#analytics' ? 'active text-green-100 bg-green-500' : 'text-gray-600']" class="flex items-center w-full pl-3 pr-4 py-2 text-left text-sm focus:outline-none border-b border-gray-500">
+              <a href="#analytics" :class="[view === '#analytics' ? 'active text-green-100 bg-green-500' : 'text-gray-600']" class="flex items-center w-full pl-3 pr-4 py-2 text-left text-sm focus:outline-none border-b">
                 <IconBase :class="[view === '#analytics' ? 'text-green-700' : 'text-gray-500']" :iconClasses="['w-6 h-6']"><IconAnalytics/></IconBase>
                 <span class="ml-2 font-semibold">Analytics</span>
               </a>
@@ -42,7 +38,6 @@
             </div>
           </div>
           <div class="md:w-8/12 px-6 sm:px-8 md:px-12 py-10 flex-shrink-0">
-            <ViewDashboard v-if="view === '#dashboard'"/>
             <ViewInbox v-if="view === '#inbox'"/>
             <ViewDonations v-if="view === '#donations'"/>
             <ViewSettings v-if="view === '#settings'"/>
@@ -57,7 +52,6 @@
 </template>
 
 <script>
-import ViewDashboard from '~/components/settings/ViewDashboard.vue'
 import ViewInbox from '~/components/settings/ViewInbox.vue'
 import ViewDonations from '~/components/settings/ViewDonations.vue'
 import ViewSettings from '~/components/settings/ViewSettings.vue'
@@ -70,14 +64,14 @@ export default {
     title: 'Settings'
   },
   components: {
-    ViewDashboard, ViewInbox, ViewDonations, ViewSettings, ViewPayment, ViewAnalytics, ViewNotifications
+    ViewInbox, ViewDonations, ViewSettings, ViewPayment, ViewAnalytics, ViewNotifications
   },
   computed: {
     view() {
       if (this.$route.hash) {
         return this.$route.hash;
       } else {
-        return "#dashboard";
+        return "#inbox";
       }
     }
   },

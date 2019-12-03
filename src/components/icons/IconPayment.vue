@@ -13,4 +13,12 @@
   .active .secondary {
     @apply text-green-900;
   }
+
+  .paymentActive .secondary {
+    @apply text-gray-700;
+  }
+
+  .payment .secondary {
+    @apply text-gray-500;
+  }
 </style>

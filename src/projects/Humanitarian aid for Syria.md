@@ -3,7 +3,7 @@ id: 003
 title: Humanitarian aid for Syria
 organization: SyriaHelp
 date: 2019-10-12
-category: Children and youth
+category: Human Services
 tags: ['Education', 'Fugitives']
 region: ['Worldwide']
 image: ./images/syria_help.jpg

@@ -6,6 +6,9 @@
         <slot/>
       </main>
     </transition>
+    <footer class="mt-20 text-gray-400">
+      <p class="text-center">Illustrations: <a target="_blank" href="https://undraw.co/">undraw.co</a> | Images: <a target="_blank" href="https://unsplash.com/">unsplash.com</a> | Copytext: <a target="_blank" href="https://www.betterplace.org/">betterplace.org</a></p>
+    </footer>
     <AppModal/>
   </div>
 </template>
