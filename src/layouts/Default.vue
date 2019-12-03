@@ -7,7 +7,23 @@
       </main>
     </transition>
     <footer class="mt-20 text-gray-400">
-      <p class="text-center">Illustrations: <a target="_blank" href="https://undraw.co/">undraw.co</a> | Images: <a target="_blank" href="https://unsplash.com/">unsplash.com</a> | Copytext: <a target="_blank" href="https://www.betterplace.org/">betterplace.org</a></p>
+      <div class="flex justify-center">
+        <div>
+          <p class="m-0 font-bold">Texts</p>
+          <p class="m-0"><a target="_blank" href="https://www.betterplace.org/">betterplace.org</a></p>
+          <p class="m-0"><a target="_blank" href="https://www.globalgiving.org/">globalgiving.org</a></p>
+        </div>
+        <div class="ml-8">
+          <p class="m-0 font-bold">Images</p>
+          <p class="m-0"><a target="_blank" href="https://undraw.co/">unsplash.com</a></p>
+          <p class="m-0"><a target="_blank" href="https://www.pexels.com/">pexels.com</a></p>
+          <p class="m-0"><a target="_blank" href="https://pixabay.com/">pixabay.com</a></p>
+        </div>
+        <div class="ml-8">
+          <p class="m-0 font-bold">Illustrations</p>
+          <p class="m-0"><a target="_blank" href="https://undraw.co/">undraw.co</a></p>
+        </div>
+      </div>
     </footer>
     <AppModal/>
   </div>
