@@ -17,11 +17,11 @@
             </div>
           </div>
         </div>
-        <div class="md:flex">
+        <div class="md:flex border-b">
           <div class="md:w-8/12 px-6 sm:px-8 md:px-12 py-10 flex-shrink-0">
-            <div class="xl:flex xl:items-center">
+            <div>
               <h2>{{ $page.projectPage.title }}</h2>
-              <div class="inline-flex xl:ml-2 px-1 text-xxs rounded border border-gray-500 items-center">
+              <div class="inline-flex px-1 text-xxs rounded border border-gray-500 items-center">
                 <span class="tracking-widest font-bold text-gray-600 uppercase">{{ $page.projectPage.organization }}</span>
                 <IconBase class="ml-1 text-gray-500" :iconClasses="['w-3 h-3']"><IconVerified/></IconBase>
               </div>
@@ -55,8 +55,55 @@
             <div class="mt-6">
               <h4 class="text-orange-500 font-bold">News from this project</h4>
               <p class="uppercase text-xs">Oct 12th 2019</p>
-              <h5>World Oceans Day</h5>
-              <p class="text-sm">Next Saturday, June 8th, will again be “World Oceans Day”. For 10 years now, the United Nations has been drawing attention to the value and worldwide threat to the oceans on this day.</p>
+              <h5>World Donation Day</h5>
+              <p class="text-sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis sed vel maxime placeat quidem provident facere, iure, consequatur nobis porro doloribus tenetur corporis numquam! Quo magnam illo nisi fuga deleniti!</p>
+              <p class="mt-6 uppercase text-xs">Sep 29th 2019</p>
+              <h5>Lorem ipsum</h5>
+              <p class="text-sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis sed vel maxime placeat quidem provident facere, iure, consequatur nobis porro doloribus tenetur corporis numquam! Quo magnam illo nisi fuga deleniti!</p>
+            </div>
+          </div>
+        </div>
+        <div class="px-6 sm:px-8 md:px-12 pt-10 pb-16">
+          <h3 class="text-xl font-bold text-gray-700">Similar projects</h3>
+          <div class="-mx-2 flex">
+            <div class="mt-5 px-2 max-w-80">
+              <g-link to="/projects/make-the-ageless-wisdom-of-tibet-available-to-all/" class="group">
+                <g-image src="~/projects/images/tibet_agless_wisdom.jpg" width="500" height="350" class="rounded-lg shadow-md group-hover:opacity-75 transition-all"/>
+                <div class="relative px-4 -mt-16 transition-all">
+                  <div class="bg-white rounded-lg px-4 py-4 shadow-lg h-32 flex flex-col justify-between">
+                    <div>
+                      <div class="text-xs text-gray-600 font-bold uppercase tracking-wide">Berzin Archives e.V.</div>
+                      <h4 class="flex items-center text-gray-900 font-bold text-lg leading-snug">Make the Ageless Wisdom of Tibet Available to All</h4>
+                    </div>
+                  </div>
+                </div>
+              </g-link>
+            </div>
+            <div class="mt-5 px-2 max-w-80">
+              <g-link to="/projects/make-the-ageless-wisdom-of-tibet-available-to-all/" class="group">
+                <g-image src="~/projects/images/safe_the_cheetahs.jpg" width="500" height="350" class="rounded-lg shadow-md group-hover:opacity-75 transition-all"/>
+                <div class="relative px-4 -mt-16 transition-all">
+                  <div class="bg-white rounded-lg px-4 py-4 shadow-lg h-32 flex flex-col justify-between">
+                    <div>
+                      <div class="text-xs text-gray-600 font-bold uppercase tracking-wide">SOS-Cheetah</div>
+                      <h4 class="flex items-center text-gray-900 font-bold text-lg leading-snug">Cheetahs on the verge of extinction</h4>
+                    </div>
+                  </div>
+                </div>
+              </g-link>
+            </div>
+            <div class="mt-5 px-2 max-w-80">
+              <g-link to="/projects/make-the-ageless-wisdom-of-tibet-available-to-all/" class="group">
+                <g-image src="~/projects/images/primeval_forests.jpg" width="500" height="350" class="rounded-lg shadow-md group-hover:opacity-75 transition-all"/>
+                <div class="relative px-4 -mt-16 transition-all">
+                  <div class="bg-white rounded-lg px-4 py-4 shadow-lg h-32 flex flex-col justify-between">
+                    <div>
+                      <div class="text-xs text-gray-600 font-bold uppercase tracking-wide">Green Forest Fund</div>
+                      <h4 class="flex items-center text-gray-900 font-bold text-lg leading-snug">Tomorrow's primeval forests</h4>
+                    </div>
+                  </div>
+                </div>
+              </g-link>
             </div>
           </div>
         </div>
