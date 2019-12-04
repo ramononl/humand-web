@@ -70,10 +70,10 @@
               <g-link to="/projects/make-the-ageless-wisdom-of-tibet-available-to-all/" class="group">
                 <g-image src="~/projects/images/tibet_agless_wisdom.jpg" width="500" height="350" fit="cover" class="rounded-lg shadow-md group-hover:opacity-75 transition-all"/>
                 <div class="relative px-4 -mt-16 transition-all">
-                  <div class="bg-white rounded-lg px-4 py-4 shadow-lg h-32 flex flex-col justify-between">
+                  <div class="bg-white rounded-lg px-4 py-4 shadow-lg h-24 flex flex-col justify-between">
                     <div>
                       <div class="text-xs text-gray-600 font-bold uppercase tracking-wide">Berzin Archives e.V.</div>
-                      <h4 class="flex items-center text-gray-900 font-bold text-lg leading-snug">Make the Ageless Wisdom of Tibet Available to All</h4>
+                      <h4 class="flex items-center text-gray-900 font-bold text-lg leading-snug">Make the Wisdom of Tibet Available</h4>
                     </div>
                   </div>
                 </div>
@@ -83,7 +83,7 @@
               <g-link to="/projects/make-the-ageless-wisdom-of-tibet-available-to-all/" class="group">
                 <g-image src="~/projects/images/safe_the_cheetahs.jpg" width="500" height="350" fit="cover" class="rounded-lg shadow-md group-hover:opacity-75 transition-all"/>
                 <div class="relative px-4 -mt-16 transition-all">
-                  <div class="bg-white rounded-lg px-4 py-4 shadow-lg h-32 flex flex-col justify-between">
+                  <div class="bg-white rounded-lg px-4 py-4 shadow-lg h-24 flex flex-col justify-between">
                     <div>
                       <div class="text-xs text-gray-600 font-bold uppercase tracking-wide">SOS-Cheetah</div>
                       <h4 class="flex items-center text-gray-900 font-bold text-lg leading-snug">Cheetahs on the verge of extinction</h4>
@@ -96,7 +96,7 @@
               <g-link to="/projects/make-the-ageless-wisdom-of-tibet-available-to-all/" class="group">
                 <g-image src="~/projects/images/primeval_forests.jpg" width="500" height="350" fit="cover" class="rounded-lg shadow-md group-hover:opacity-75 transition-all"/>
                 <div class="relative px-4 -mt-16 transition-all">
-                  <div class="bg-white rounded-lg px-4 py-4 shadow-lg h-32 flex flex-col justify-between">
+                  <div class="bg-white rounded-lg px-4 py-4 shadow-lg h-24 flex flex-col justify-between">
                     <div>
                       <div class="text-xs text-gray-600 font-bold uppercase tracking-wide">Green Forest Fund</div>
                       <h4 class="flex items-center text-gray-900 font-bold text-lg leading-snug">Tomorrow's primeval forests</h4>
