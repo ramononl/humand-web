@@ -42,7 +42,7 @@ export default {
   }
 
   .primary-light:hover {
-    @apply bg-green-200 border-green-200 text-green-700;
+    @apply bg-green-300 border-green-300 text-green-600;
   }
 
   .primary-light-outline {
@@ -50,7 +50,7 @@ export default {
   }
 
   .primary-light-outline:hover {
-    @apply bg-transparent border-green-200 text-green-200;
+    @apply bg-transparent border-green-300 text-green-300;
   }
 
   .secondary {
