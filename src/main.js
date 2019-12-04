@@ -71,6 +71,12 @@ export default function(Vue, { router, head, isClient, appOptions }) {
       "bg-green-050 text-gray-900 font-sans antialiased relative min-h-screen pb-12"
   };
 
+  // Add a meta tag
+  head.meta.push({
+    name: "robots",
+    content: "noindex,follow"
+  });
+
   // Configure Vuex
   Vue.use(Vuex);
 
