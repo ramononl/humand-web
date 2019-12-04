@@ -8,13 +8,13 @@
     <div class="mt-4">
       <div class="flex justify-between items-center px-6 py-5 bg-gray-200 rounded-lg">
         <h4>Your total donations</h4>
-        <div class="text-3xl font-bold text-orange-500">$ 139</div>
+        <div class="text-2xl sm:text-3xl font-bold text-orange-500">$ 139</div>
       </div>
       <div class="mt-4 -mx-2 flex">
         <div class="w-1/2">
           <div class="mx-2 px-6 py-5 h-full flex flex-col justify-between bg-gray-200 rounded-lg">
             <div>
-              <div class="text-3xl font-bold text-orange-500">$ 24</div>
+              <div class="text-2xl sm:text-3xl font-bold text-orange-500">$ 24</div>
               <h4>Your monthly donations</h4>
             </div>
             <div class="mt-8">
@@ -27,7 +27,7 @@
         <div class="w-1/2">
           <div class="mx-2 px-6 py-5 h-full flex flex-col justify-between bg-gray-200 rounded-lg">
             <div>
-              <div class="text-3xl font-bold text-orange-500">$ 10,870</div>
+              <div class="text-2xl sm:text-3xl font-bold text-orange-500">$ 10,870</div>
               <h4>Monthly donations for your projects</h4>
             </div>
             <div class="mt-8">
