@@ -2,7 +2,7 @@
   <Layout>
     <ContainerConstrained>
       <div class="mb-6 px-6 sm:px-8 md:px-12">
-        <h1>Allison Morrison</h1>
+        <h1>Hi, Allison Morrison!</h1>
         <p class="mt-0">All your donations, news and settings in one place.</p>
       </div>
       <div class="bg-white shadow-lg rounded-lg overflow-hidden">
@@ -11,11 +11,15 @@
             <div class="border rounded-lg overflow-hidden">
               <a href="#inbox" :class="[view === '#inbox' ? 'active text-green-100 bg-green-500' : 'text-gray-600']" class="flex items-center w-full pl-3 pr-4 py-2 text-left text-sm focus:outline-none border-b">
                 <IconBase :class="[view === '#inbox' ? 'text-green-700' : 'text-gray-500']" :iconClasses="['w-6 h-6']"><IconInbox/></IconBase>
-                <span class="ml-2 font-semibold">Inbox</span>
+                <span class="ml-2 font-semibold">Project updates</span>
               </a>
-              <a href="#donations" :class="[view === '#donations' ? 'active text-green-100 bg-green-500' : 'text-gray-600']" class="flex items-center w-full pl-3 pr-4 py-2 text-left text-sm focus:outline-none">
+              <a href="#donations" :class="[view === '#donations' ? 'active text-green-100 bg-green-500' : 'text-gray-600']" class="flex items-center w-full pl-3 pr-4 py-2 text-left text-sm focus:outline-none border-b">
                 <IconBase :class="[view === '#donations' ? 'text-green-700' : 'text-gray-500']" :iconClasses="['w-6 h-6']"><IconDonations/></IconBase>
                 <span class="ml-2 font-semibold">Donations</span>
+              </a>
+              <a href="#analytics" :class="[view === '#analytics' ? 'active text-green-100 bg-green-500' : 'text-gray-600']" class="flex items-center w-full pl-3 pr-4 py-2 text-left text-sm focus:outline-none">
+                <IconBase :class="[view === '#analytics' ? 'text-green-700' : 'text-gray-500']" :iconClasses="['w-6 h-6']"><IconAnalytics/></IconBase>
+                <span class="ml-2 font-semibold">Engagements</span>
               </a>
             </div>
             <div class="mt-6 border rounded-lg overflow-hidden">
@@ -26,10 +30,6 @@
               <a href="#payment" :class="[view === '#payment' ? 'active text-green-100 bg-green-500' : 'text-gray-600']" class="flex items-center w-full pl-3 pr-4 py-2 text-left text-sm focus:outline-none border-b">
                 <IconBase :class="[view === '#payment' ? 'text-green-700' : 'text-gray-500']" :iconClasses="['w-6 h-6']"><IconPayment/></IconBase>
                 <span class="ml-2 font-semibold">Payment</span>
-              </a>
-              <a href="#analytics" :class="[view === '#analytics' ? 'active text-green-100 bg-green-500' : 'text-gray-600']" class="flex items-center w-full pl-3 pr-4 py-2 text-left text-sm focus:outline-none border-b">
-                <IconBase :class="[view === '#analytics' ? 'text-green-700' : 'text-gray-500']" :iconClasses="['w-6 h-6']"><IconAnalytics/></IconBase>
-                <span class="ml-2 font-semibold">Analytics</span>
               </a>
               <a href="#notifications" :class="[view === '#notifications' ? 'active text-green-100 bg-green-500' : 'text-gray-600']" class="flex items-center w-full pl-3 pr-4 py-2 text-left text-sm focus:outline-none">
                 <IconBase :class="[view === '#notifications' ? 'text-green-700' : 'text-gray-500']" :iconClasses="['w-6 h-6']"><IconNotifications/></IconBase>

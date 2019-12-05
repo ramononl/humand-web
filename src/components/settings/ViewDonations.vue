@@ -60,6 +60,10 @@
         </div>
       </div>
     </div>
+    <div class="mt-5">
+      <div class="w-64"><AppButton buttonText="Discover projects" iconComp="iconArrowRight" buttonStyle="secondary" class="text-sm w-full justify-center"/></div>
+      <div class="w-64 mt-3"><AppButton buttonText="Your engagements" iconComp="iconAnalytics" buttonStyle="primary" class="text-sm w-full justify-center"/></div>
+    </div>
   </div>
 </template>
 

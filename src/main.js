@@ -34,6 +34,7 @@ import IconNotifications from "~/components/icons/IconNotifications.vue";
 import IconTrash from "~/components/icons/IconTrash.vue";
 import IconCheck from "~/components/icons/IconCheck.vue";
 import IconCheveronDown from "~/components/icons/IconCheveronDown.vue";
+import IconLocation from "~/components/icons/IconLocation.vue";
 
 export default function(Vue, { router, head, isClient, appOptions }) {
   // Set default layout as a global component
@@ -64,6 +65,7 @@ export default function(Vue, { router, head, isClient, appOptions }) {
   Vue.component("IconTrash", IconTrash);
   Vue.component("IconCheck", IconCheck);
   Vue.component("IconCheveronDown", IconCheveronDown);
+  Vue.component("IconLocation", IconLocation);
 
   // Add attributes to BODY tag
   head.bodyAttrs = {

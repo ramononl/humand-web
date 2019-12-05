@@ -2,9 +2,9 @@
   <div>
     <div class="flex items-center">
       <IconBase class="text-gray-500" :iconClasses="['w-10 h-10']"><IconAnalytics/></IconBase>
-      <h2 class="ml-2">Analytics</h2>
+      <h2 class="ml-2">Engagements</h2>
     </div>
-    <p>Your donations in numbers, charts and graphs.</p>
+    <p>You make a difference. Check your donations in numbers and charts.</p>
     <div class="mt-4">
       <div class="flex justify-between items-center px-6 py-5 bg-gray-200 rounded-lg">
         <h4>Your total donations</h4>

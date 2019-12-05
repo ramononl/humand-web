@@ -19,7 +19,8 @@ query AllProjects {
         path
         organization
         tags
-        image (width: 320, height: 240)
+        region
+        image (width: 320, height: 200)
       }
     }
   }

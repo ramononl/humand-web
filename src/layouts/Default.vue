@@ -23,6 +23,15 @@
           <span class="block text-center text-gray-400 sm:text-left m-0 font-bold">Illustrations</span>
           <span class="block text-center text-gray-400 sm:text-left m-0"><a target="_blank" href="https://undraw.co/">undraw.co</a></span>
         </div>
+        <div class="mt-4 sm:mt-0 sm:ml-8">
+          <span class="block text-center text-gray-400 sm:text-left m-0 font-bold">People</span>
+          <span class="block text-center text-gray-400 sm:text-left m-0">Daniel Bucher</span>
+          <span class="block text-center text-gray-400 sm:text-left m-0">Fabrice Göldi</span>
+          <span class="block text-center text-gray-400 sm:text-left m-0">Ramon Kratzer</span>
+        </div>
+      </div>
+      <div class="mt-8 flex flex-col justify-center">
+        <span class="text-center text-gray-400">Student project in the bachelors <br>degree Multimedia Production</span>
       </div>
     </footer>
     <AppModal/>
