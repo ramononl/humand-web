@@ -8,7 +8,7 @@
       </div>
     
       <div class="sm:w-10/12 lg:w-auto sm:mx-auto lg:mx-0 lg:absolute right-0 top-0 mt-16 lg:mt-32 px-8 py-16 bg-green-500 rounded-lg">
-        <h1 class="xl:mt-8 text-3xl xl:text-4xl leading-snug font-black text-green-100">Make your choice.<br/>Support meaningful projects.</h1>
+        <h1 class="xl:mt-8 text-3xl xl:text-4xl leading-tight font-black text-green-100">Make your choice.<br/>Support meaningful projects.</h1>
         <p class="mt-3 font-black text-green-200">Monthly charity subscription service</p>
         <div class="mt-8 md:flex">
           <AppButton to="/about/" buttonText="How does it work?" buttonStyle="primary-light"/>

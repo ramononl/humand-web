@@ -15,9 +15,9 @@
     <h3>Your projects</h3>
     <div class="bg-gray-200 rounded-lg">
       <div class="px-6 pt-5 pb-4 border-b border-white">
-        <div class="flex items-center justify-between">
+        <div class="sm:flex items-center justify-between">
           <div class="text-lg text-gray-700">One Earth – One Ocean</div>
-          <div class="ml-3 px-1 text-xs rounded border border-red-500 tracking-widest font-bold text-red-500 uppercase hover:bg-red-500 hover:text-red-100 cursor-pointer">Stop donation</div>
+          <div class="flex-shrink-0 inline-block sm:block sm:ml-3 px-1 text-xs rounded border border-red-500 tracking-widest font-bold text-red-500 uppercase hover:bg-red-500 hover:text-red-100 cursor-pointer">Stop donation</div>
         </div>
         <div class="mt-2 flex items-center">
           <div class="flex-grow">
@@ -30,9 +30,9 @@
         </div>
       </div>
       <div class="px-6 pt-5 pb-4 border-b border-white">
-        <div class="flex items-center justify-between">
-          <div class="text-lg text-gray-700">One Earth – One Ocean</div>
-          <div class="ml-3 px-1 text-xs rounded border border-red-500 tracking-widest font-bold text-red-500 uppercase hover:bg-red-500 hover:text-red-100 cursor-pointer">Stop donation</div>
+        <div class="sm:flex items-center justify-between">
+          <div class="text-lg text-gray-700">Squirrels in distress!</div>
+          <div class="flex-shrink-0 inline-block sm:block sm:ml-3 px-1 text-xs rounded border border-red-500 tracking-widest font-bold text-red-500 uppercase hover:bg-red-500 hover:text-red-100 cursor-pointer">Stop donation</div>
         </div>
         <div class="mt-2 flex items-center">
           <div class="flex-grow">
@@ -45,9 +45,9 @@
         </div>
       </div>
       <div class="px-6 pt-5 pb-4 border-b border-white">
-        <div class="flex items-center justify-between">
-          <div class="text-lg text-gray-700">One Earth – One Ocean</div>
-          <div class="ml-3 px-1 text-xs rounded border border-red-500 tracking-widest font-bold text-red-500 uppercase hover:bg-red-500 hover:text-red-100 cursor-pointer">Stop donation</div>
+        <div class="sm:flex items-center justify-between">
+          <div class="text-lg text-gray-700">Dyeing For Peace in Rwanda</div>
+          <div class="flex-shrink-0 inline-block sm:block sm:ml-3 px-1 text-xs rounded border border-red-500 tracking-widest font-bold text-red-500 uppercase hover:bg-red-500 hover:text-red-100 cursor-pointer">Stop donation</div>
         </div>
         <div class="mt-2 flex items-center">
           <div class="flex-grow">

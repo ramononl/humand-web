@@ -80,7 +80,7 @@
               </g-link>
             </div>
             <div class="mt-5 px-2 max-w-80">
-              <g-link to="/projects/make-the-ageless-wisdom-of-tibet-available-to-all/" class="group">
+              <g-link to="/projects/cheetahs-on-the-verge-of-extinction/" class="group">
                 <g-image src="~/projects/images/safe_the_cheetahs.jpg" width="500" height="350" fit="cover" class="rounded-lg shadow-md group-hover:opacity-75 transition-all"/>
                 <div class="relative px-4 -mt-16 transition-all">
                   <div class="bg-white rounded-lg px-4 py-4 shadow-lg h-24 flex flex-col justify-between">
@@ -93,7 +93,7 @@
               </g-link>
             </div>
             <div class="mt-5 px-2 max-w-80">
-              <g-link to="/projects/make-the-ageless-wisdom-of-tibet-available-to-all/" class="group">
+              <g-link to="/projects/tomorrow-s-primeval-forests/" class="group">
                 <g-image src="~/projects/images/primeval_forests.jpg" width="500" height="350" fit="cover" class="rounded-lg shadow-md group-hover:opacity-75 transition-all"/>
                 <div class="relative px-4 -mt-16 transition-all">
                   <div class="bg-white rounded-lg px-4 py-4 shadow-lg h-24 flex flex-col justify-between">

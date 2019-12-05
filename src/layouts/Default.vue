@@ -9,19 +9,19 @@
     <footer class="mt-20 text-gray-400">
       <div class="flex flex-col sm:flex-row justify-center">
         <div>
-          <p class="text-center sm:text-left m-0 font-bold">Texts</p>
-          <p class="text-center sm:text-left m-0"><a target="_blank" href="https://www.betterplace.org/">betterplace.org</a></p>
-          <p class="text-center sm:text-left m-0"><a target="_blank" href="https://www.globalgiving.org/">globalgiving.org</a></p>
+          <span class="block text-center text-gray-400 sm:text-left m-0 font-bold">Texts</span>
+          <span class="block text-center text-gray-400 sm:text-left m-0"><a target="_blank" href="https://www.betterplace.org/">betterplace.org</a></span>
+          <span class="block text-center text-gray-400 sm:text-left m-0"><a target="_blank" href="https://www.globalgiving.org/">globalgiving.org</a></span>
         </div>
         <div class="mt-4 sm:mt-0 sm:ml-8">
-          <p class="text-center sm:text-left m-0 font-bold">Images</p>
-          <p class="text-center sm:text-left m-0"><a target="_blank" href="https://undraw.co/">unsplash.com</a></p>
-          <p class="text-center sm:text-left m-0"><a target="_blank" href="https://www.pexels.com/">pexels.com</a></p>
-          <p class="text-center sm:text-left m-0"><a target="_blank" href="https://pixabay.com/">pixabay.com</a></p>
+          <span class="block text-center text-gray-400 sm:text-left m-0 font-bold">Images</span>
+          <span class="block text-center text-gray-400 sm:text-left m-0"><a target="_blank" href="https://undraw.co/">unsplash.com</a></span>
+          <span class="block text-center text-gray-400 sm:text-left m-0"><a target="_blank" href="https://www.pexels.com/">pexels.com</a></span>
+          <span class="block text-center text-gray-400 sm:text-left m-0"><a target="_blank" href="https://pixabay.com/">pixabay.com</a></span>
         </div>
         <div class="mt-4 sm:mt-0 sm:ml-8">
-          <p class="text-center sm:text-left m-0 font-bold">Illustrations</p>
-          <p class="text-center sm:text-left m-0"><a target="_blank" href="https://undraw.co/">undraw.co</a></p>
+          <span class="block text-center text-gray-400 sm:text-left m-0 font-bold">Illustrations</span>
+          <span class="block text-center text-gray-400 sm:text-left m-0"><a target="_blank" href="https://undraw.co/">undraw.co</a></span>
         </div>
       </div>
     </footer>

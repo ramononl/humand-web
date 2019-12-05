@@ -12,12 +12,12 @@
             <div class="flex items-center">
               <input class="leading-tight" type="checkbox">
               <div class="ml-2 leading-snug font-bold">
-                <div>Project Name</div>
-                <div class="text-xs">Subject</div>
+                <div>One Earth – One Ocean</div>
+                <div class="text-xs">New milestone: Thanks to your ...</div>
               </div>
             </div>
             <div class="flex items-center">
-              <div class="text-xs uppercase">Wed 11/27</div>
+              <div class="text-xs font-bold uppercase">Wed 11/27</div>
               <IconBase class="hidden group-hover:block ml-2 text-red-300 hover:text-red-500" :iconClasses="['w-4 h-4']"><IconTrash/></IconBase>
             </div>
           </div>
@@ -29,12 +29,12 @@
             <div class="flex items-center">
               <input class="leading-tight" type="checkbox">
               <div class="ml-2 leading-snug font-bold">
-                <div>Project Name</div>
-                <div class="text-xs">Subject</div>
+                <div>Squirrels in distress!</div>
+                <div class="text-xs">Squirrel hospital in Berlin Mitte ...</div>
               </div>
             </div>
             <div class="flex items-center">
-              <div class="text-xs uppercase">Wed 11/27</div>
+              <div class="text-xs font-bold uppercase">Tue 11/15</div>
               <IconBase class="hidden group-hover:block ml-2 text-red-300 hover:text-red-500" :iconClasses="['w-4 h-4']"><IconTrash/></IconBase>
             </div>
           </div>
@@ -46,12 +46,12 @@
             <div class="flex items-center">
               <input class="leading-tight" type="checkbox">
               <div class="ml-2 leading-snug">
-                <div>Project Name</div>
-                <div class="text-xs">Subject</div>
+                <div>Squirrels in distress!</div>
+                <div class="text-xs">Our new mascot</div>
               </div>
             </div>
             <div class="flex items-center">
-              <div class="text-xs uppercase">Wed 11/27</div>
+              <div class="text-xs uppercase">Sat 10/20</div>
               <IconBase class="hidden group-hover:block ml-2 text-red-300 hover:text-red-500" :iconClasses="['w-4 h-4']"><IconTrash/></IconBase>
             </div>
           </div>
@@ -63,12 +63,12 @@
             <div class="flex items-center">
               <input class="leading-tight" type="checkbox">
               <div class="ml-2 leading-snug">
-                <div>Project Name</div>
-                <div class="text-xs">Subject</div>
+                <div>Tomorrow's primeval forests</div>
+                <div class="text-xs">1.000 trees planted in Uganda</div>
               </div>
             </div>
             <div class="flex items-center">
-              <div class="text-xs uppercase">Wed 11/27</div>
+              <div class="text-xs uppercase">Wed 10/02</div>
               <IconBase class="hidden group-hover:block ml-2 text-red-300 hover:text-red-500" :iconClasses="['w-4 h-4']"><IconTrash/></IconBase>
             </div>
           </div>
@@ -80,12 +80,12 @@
             <div class="flex items-center">
               <input class="leading-tight" type="checkbox">
               <div class="ml-2 leading-snug">
-                <div>Project Name</div>
-                <div class="text-xs">Subject</div>
+                <div>One Earth – One Ocean</div>
+                <div class="text-xs">Together we are stronger</div>
               </div>
             </div>
             <div class="flex items-center">
-              <div class="text-xs uppercase">Wed 11/27</div>
+              <div class="text-xs uppercase">Wed 09/08</div>
               <IconBase class="hidden group-hover:block ml-2 text-red-300 hover:text-red-500" :iconClasses="['w-4 h-4']"><IconTrash/></IconBase>
             </div>
           </div>
